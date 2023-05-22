@@ -1,0 +1,19 @@
+apiVersion: plugin.halo.run/v1alpha1
+kind: Plugin
+metadata:
+  name: LiquidFormatter
+spec:
+  enabled: true
+  version: 1.0.0
+  requires: ">=2.0.0"
+  author:
+    name: Dioxide.CN
+    website: https://github.com/Mordor171/Liquid-Formatter
+  logo: https://dioxide-cn.ink/upload/logo.png
+  settingName: plugin-liquid-formatter-settings
+  configMapName: plugin-liquid-formatter-configMap
+  homepage: https://github.com/Mordor171/Liquid-Formatter
+  displayName: "Liquid Formatter"
+  description: "Support for multimodal content"
+  license:
+    - name: "MIT"

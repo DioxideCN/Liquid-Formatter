@@ -1,0 +1,29 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: plugin-liquid-formatter-settings
+spec:
+  forms:
+    - group: basic
+      label: 基本设置
+      formSchema:
+        - $formkit: radio
+          name: antvG2
+          id: antvG2
+          label: AntV G2
+          value: false
+          options:
+            - value: true
+              label: 启用
+            - value: false
+              label: 禁用
+        - $formkit: radio
+          name: antvX6
+          id: antvX6
+          label: AntV X6
+          value: false
+          options:
+            - value: true
+              label: 启用
+            - value: false
+              label: 禁用
