@@ -22,13 +22,12 @@ public class AppUnitTest {
     @Test
     public void cpuUnitTest() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
+        // 实现一个3秒自动化的CPU使用率监控功能
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
         executor.scheduleAtFixedRate(() -> {
             LocalDateTime currentTime = LocalDateTime.now();
             System.out.println("[" + currentTime.format(formatter) + " CPU-Monitor]" + Arrays.toString(watchDog.getBatchCPULoad()));
         }, 0, 3, TimeUnit.SECONDS);
-        while (true) {}
     }
 
 }

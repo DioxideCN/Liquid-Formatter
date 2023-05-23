@@ -10,7 +10,7 @@ Liquid Formatter是为Halo 2.0开发的一款多模态内容转换插件，可�
 
 ## 使用文档
 为了确保能使用以下的功能，使用者需要在插件设置页面启用相应的功能。
-[演示页面](https://dioxide-cn.ink/archives/antv-x6-antv-g2)
+[演示页面](https://dioxide-cn.ink/archives/liquid-formatter-antv)
 
 ### AntV G2
 参考[阿里巴巴官方AntV G2文档](https://g2.antv.antgroup.com/examples#geo-geo)，在文章中按如下的格式进行编写：
