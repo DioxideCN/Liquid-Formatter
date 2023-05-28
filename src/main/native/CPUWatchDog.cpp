@@ -1,7 +1,6 @@
 #include <jni.h>
 #include <pdh.h>
 #include <vector>
-#include <thread>
 #include "run_halo_liquid_utils_CPUWatchDog.h"
 
 extern "C" {
