@@ -1,7 +1,7 @@
 apiVersion: v1alpha1
 kind: Setting
 metadata:
-  name: plugin-liquid-formatter-settings
+  name: plugin-liquid-settings
 spec:
   forms:
     - group: basic
@@ -27,3 +27,11 @@ spec:
               label: 启用
             - value: false
               label: 禁用
+    - group: route
+      label: 路由设置
+      formSchema:
+        - $formkit: text
+          label: 目录页标题
+          name: directory
+          validation: required
+          value: "目录"

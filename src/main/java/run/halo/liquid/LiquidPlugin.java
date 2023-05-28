@@ -9,9 +9,9 @@ import run.halo.app.plugin.BasePlugin;
  * @date 2023/5/22 19:30:07
  */
 @Component
-public class LiquidFormatterPlugin extends BasePlugin {
+public class LiquidPlugin extends BasePlugin {
 
-    public LiquidFormatterPlugin(PluginWrapper wrapper) {
+    public LiquidPlugin(PluginWrapper wrapper) {
         super(wrapper);
     }
 

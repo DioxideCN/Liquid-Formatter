@@ -12,18 +12,11 @@ import run.halo.app.theme.DefaultTemplateEnum;
 import run.halo.app.theme.dialect.TemplateHeadProcessor;
 import run.halo.app.theme.router.strategy.ModelConst;
 
-/**
- * tocbot 插件
- *
- * @author liuzhihang
- * @date 2022/10/23
- */
 @Component
-public class LiquidFormatterProcessor implements TemplateHeadProcessor {
-
+public class LiquidProcessor implements TemplateHeadProcessor {
     private final SettingFetcher settingFetcher;
 
-    public LiquidFormatterProcessor(SettingFetcher settingFetcher) {
+    public LiquidProcessor(SettingFetcher settingFetcher) {
         this.settingFetcher = settingFetcher;
     }
 
@@ -41,22 +34,27 @@ public class LiquidFormatterProcessor implements TemplateHeadProcessor {
     }
 
     private String appendSource(BasicConfig config) {
-        // language=html
-        String script = """
-                    <script src="/plugins/LiquidFormatter/assets/static/lib/LiquidFormatterInit.js"></script>
-                    """;
+        String dataG2 = "data-g2-enable='" + config.antvG2 + "'";
+        String dataX6 = "data-x6-enable='" + config.antvX6 + "'";
+
+        String script = "<script src='/plugins/PluginLiquid/assets/static/lib/LiquidFormatterInit.js' id='liquid-formatter' " +
+                dataG2 +
+                " " +
+                dataX6 +
+                "></script>";
 
         if (config.antvG2) {
             script += """
-                    <script src="/plugins/LiquidFormatter/assets/static/antv/g2.min.js"></script>
+                    <script src="/plugins/PluginLiquid/assets/static/antv/g2.min.js"></script>
                     """;
         }
         if (config.antvX6) {
             script += """
-                    <script src="/plugins/LiquidFormatter/assets/static/antv/x6.min.js"></script>
+                    <script src="/plugins/PluginLiquid/assets/static/antv/x6.min.js"></script>
                     """;
         }
 
+        // language=html
         return script;
     }
 
@@ -70,7 +68,7 @@ public class LiquidFormatterProcessor implements TemplateHeadProcessor {
     }
 
     @Data
-    public static class BasicConfig {
+    static class BasicConfig {
         Boolean antvG2;
         Boolean antvX6;
     }
